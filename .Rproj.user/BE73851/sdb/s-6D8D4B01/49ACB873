@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "fileURL <- \"https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip\"\ndownload.file(fileURL, \"./house_power.zip\")\nunzip(\"./house_power.zip\")\ndata <- read.table(\"household_power_consumption.txt\",header = TRUE, sep = \";\", na.strings = \"?\")\nfinal <- data[data$Date %in% c(\"1/2/2007\",\"2/2/2007\"),]\nSet_time <- strptime(paste(final$Date, final$Time,sep = \" \"),\"%d/%m/%Y %H:%M:%S\")\nfinal <- cbind(Set_time,final)\n\nplot(final$Set_time,final$Global_active_power,type = \"l\",xlab = \"\",ylab = \"Global Active Power (kilowatts)\")\n",
+    "created" : 1537567037468.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "681543825",
+    "id" : "49ACB873",
+    "lastKnownWriteTime" : 1537567483,
+    "last_content_update" : 1537567483627,
+    "path" : "C:/Users/heman/Google Drive/School Stuff/Coursera/Data Science Specialization/Exploratory Data Analysis/Week 1/Assignment 1/plot2.R",
+    "project_path" : "plot2.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

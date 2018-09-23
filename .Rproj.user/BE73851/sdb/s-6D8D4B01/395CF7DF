@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\n\n#download and import data \nfileURL <- \"https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip\"\ndownload.file(fileURL, \"./house_power.zip\")\nunzip(\"./house_power.zip\")\ndata <- read.table(\"household_power_consumption.txt\",header = TRUE,sep = \";\",na.strings = \"?\")\n\n",
+    "created" : 1537562680753.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "447671517",
+    "id" : "395CF7DF",
+    "lastKnownWriteTime" : 1537564507,
+    "last_content_update" : 1537564507435,
+    "path" : "C:/Users/heman/Google Drive/School Stuff/Coursera/Data Science Specialization/Exploratory Data Analysis/Week 1/Assignment 1/analysis.R",
+    "project_path" : "analysis.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

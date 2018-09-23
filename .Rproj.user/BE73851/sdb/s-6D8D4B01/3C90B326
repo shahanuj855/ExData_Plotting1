@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\ndata <- read.table(\"household_power_consumption.txt\",header = TRUE, sep = \";\", na.strings = \"?\")\nfinal <- data[data$Date %in% c(\"1/2/2007\",\"2/2/2007\"),]\nSet_time <- strptime(paste(final$Date, final$Time,sep = \" \"),\"%d/%m/%Y %H:%M:%S\")\nfinal <- cbind(Set_time,final)\n\npar(mfrow=c(2,2))\nplot(final$Set_time,final$Global_active_power,type=\"l\",xlab = \"\",ylab = \"Global Active\")\nplot(final$Set_time,final$Voltage,type = \"l\",xlab = \"datetime\", ylab = \"Voltage\")\n\nplot(final$Set_time, final$Sub_metering_1,type = \"l\",col = \"black\",xlab = \"\",ylab = \"Energy sub metering\")\nlines(final$Set_time, final$Sub_metering_2, col = \"red\")\nlines(final$Set_time,final$Sub_metering_3,col = \"blue\")\nlegend(\"topright\",legend = c(\"Sub_metering_1\",\"Sub_metering_2\",\"Sub_metering_3\"), col = lines <- c(\"black\", \"red\",\"blue\"),lty = \"solid\")\n\nplot(final$Set_time,final$Global_reactive_power,type = \"l\",xlab = \"datetime\", ylab = \"Global_reactive_power\")\n",
+    "created" : 1537664003078.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "22307427",
+    "id" : "3C90B326",
+    "lastKnownWriteTime" : 1537665704,
+    "last_content_update" : 1537665704821,
+    "path" : "C:/Users/heman/Google Drive/School Stuff/Coursera/Data Science Specialization/Exploratory Data Analysis/Week 1/Assignment 1/plot4.R",
+    "project_path" : "plot4.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
